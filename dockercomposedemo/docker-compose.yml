@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web: 
+    image: httpd
+    container_name: mywebserver
+    networks:
+      - webnetwork
+    ports:
+      - "8080:80"
+networks:
+  webnetwork:
+    driver: bridge
+  dbnetwork:
+    driver: bridge
